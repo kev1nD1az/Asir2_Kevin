@@ -1,5 +1,9 @@
 <html>
 <h1>HOLA A TODOS</h1>
+<h1>Ips COMPAÑEROS</h1>
+<a href="https://192.168.0.91/index.php">Daniel Hernandez</a></br>
+<a href="https://192.168.0.36/asir2_James/index.php">Jaime Garcia</a>
+
 
 <form>
 <input type="email" name="email"/>
