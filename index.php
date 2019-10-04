@@ -1,8 +1,8 @@
 <html>
 <h1>HOLA A TODOS</h1>
 <h1>Ips COMPAÑEROS</h1>
-<a href="https://192.168.0.91/index.php">Daniel Hernandez</a></br>
-<a href="https://192.168.0.36/asir2_James/index.php">Jaime Garcia</a>
+<a href="http://192.168.0.91/index.php">Daniel Hernandez</a></br>
+<a href="http://192.168.0.36/asir2_James/index.php">Jaime Garcia</a>
 
 
 <form>
@@ -12,14 +12,14 @@
 
 <?php
 
-if(isset($_GET))
-
+if(isset($_GET['email'])){
+	
 
 $f=fopen('email.txt','a');
 
 fwrite($f,$_GET['email']."\r\n");
 
-fclose($f)
-
+fclose($f);
+}
 ?>
 </html>
