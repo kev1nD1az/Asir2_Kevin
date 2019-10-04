@@ -10,6 +10,6 @@
 <a href="https://www.linkedin.com/in/pablo-argumosa-ruiz/">Pablo</a></br>
 <a href="https://www.linkedin.com/in/jaimegarciacifuentes/">Jaime</a></br>
 <a href="https://www.linkedin.com/in/davidjpblanco/">David</a></br>
-
+<p>Una de las maneras de agilizar el proceso de recoleccion de links serie con la creacion de un formulario</p>
 
 </html>
