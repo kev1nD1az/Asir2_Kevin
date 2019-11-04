@@ -1,26 +1,27 @@
 <?php
-
 function calcula($a,$b){
+	$r=null;
+	$r=$r.'<div>';
+$r=$r.'Suma de '.$a.' + '.$b.' = ';
+$r=$r.($a+$b);
+$r=$r.'</div>';
 
-echo '<div>';
-echo 'Suma de '.$a.' + '.$b.' = ';
-echo $a+$b;
-echo '</div>';
+$r=$r.'<div>';
+$r=$r.'Resta de '.$a.' - '.$b.' = ';
+$r=$r.($a-$b);
+$r=$r.'</div>';
 
-echo '<div>';
-echo 'Resta de '.$a.' - '.$b.' = ';
-echo $a-$b;
-echo '</div>';
+$r=$r.'<div>';
+$r=$r.'Multiplicación de '.$a.' x '.$b.' = ';
+$r=$r.($a*$b);
+$r=$r.'</div>';
 
-echo '<div>';
-echo 'Multiplicación de '.$a.' x '.$b.' = ';
-echo $a*$b;
-echo '</div>';
-
-echo '<div>';
-echo 'División de '.$a.' / '.$b.' = ';
-echo $a/$b;
-echo '</div>'; 
+$r=$r.'<div>';
+$r=$r.'División de '.$a.' / '.$b.' = ';
+$r=$r.($a/$b);
+$r=$r.'</div>'; 
+	return $r;
 }
-calcula(5,5);
+$b=calcula(5,5);
+echo $b;
 ?>	

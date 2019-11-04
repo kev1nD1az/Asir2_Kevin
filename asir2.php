@@ -1,18 +1,13 @@
-<html>
-<h1>Ips COMPAÑEROS</h1>
-<a href="https://192.168.0.91/asir2.php">Daniel Hernandez</a></br>
-<a href="https://192.168.0.85/asir2.php">Jaime Garcia</a>
 <?php
+$dns=[
+	'192.168.0.105'=>'  Jaime',
+	'192.168.0.100'=>'  Jose Luis',
+	'192.168.0.99'=>'  Kim',
+	'192.168.0.70'=>'  Kevin',
+	'::1'=>'  Kevin',
+	];
 
-
-
-$f=fopen('visitas.txt','a');
-
-fwrite($f,$_SERVER['REMOTE_ADDR']."\r\n");
-
-fclose($f)
-
-
-
+$f=fopen('registro.txt','a');
+fwrite($f, date('Y-m-d H:i:s').($dns[$_SERVER['REMOTE_ADDR']]."\r\n"));
+fclose($f);
 ?>
-</html>
