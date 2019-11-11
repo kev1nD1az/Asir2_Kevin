@@ -1,9 +1,13 @@
+<html>
+<h1>Ips COMPAÑEROS</h1>
+<a href="https://192.168.0.108/asir2_Jaime/asir2.php">Jaime Garcia</a></br>
+<a href="https://192.168.0.99/asir2_Kimberly/asir2.php">Kimberly</a>
+</html>
 <?php
 $dns=[
-	'192.168.0.105'=>'  Jaime',
+	'192.168.0.108'=>'  Jaime',
 	'192.168.0.100'=>'  Jose Luis',
 	'192.168.0.99'=>'  Kim',
-	'192.168.0.70'=>'  Kevin',
 	'::1'=>'  Kevin',
 	];
 
