@@ -4,18 +4,23 @@
 		<title> RIOS</title>
 	</head>
 	<body bgcolor="#E6E6FA">
+	<center>
+	<table>
 		<h1>Bienvenidos a españa</h1>
 			<p>En esta pagina vamos a ver las provincia de autonomías bañadas por el Cantábrico.
 		<h2>Las principales son:</h2>
 		 <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" width="500" height="300"></center>
-		 <p> ¿Te gusta España? Mete tus datos. </br><font size="3" color="red"> <b><u>VIVA ESPAÑA</u></b></font>
+		 <p> ¿Te gusta España? Mete tus datos. <br/><font size="3" color="red"> <b><u>VIVA ESPAÑA</u></b></font>
 			 <form>
 				<input type="email" name="email"/>
 				<button>Enviar</button>
 			</form>
-		<h3>Tabla</h3>
-			
-	<table border="1" width="1000" align="center">
+		<h1>Provincias</h1>
+		<h2>Comunidades</h2>
+		Cantabria
+		<h3>Ciudades</h3>
+			Santander
+	<table border="1" width="1000" align="center" border>
 	  <tr align="center">
 		<th bgcolor="#ffff00">Autonomia</th>
 		<th bgcolor="#ff0000">Provincia</th>
@@ -29,6 +34,7 @@
 		<td>Castropol</td>
 	  </tr>
 	</table> 
+	</center>
 	</body>
 <?php
 
