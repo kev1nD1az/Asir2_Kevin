@@ -1,3 +1,34 @@
+<?php
+	//conectamos Con el servidor
+	$conectar = new mysqli('localhost','id11961169_kevin','12345678','id11961169_formularios');
+	//verificamos la conexion
+	if(!$conectar){
+		echo"No Se Pudo Conectar Con El Servidor";
+	}else{
+
+	}
+	//recuperar las variables
+	$name=$_POST['name'];
+	$email=$_POST['email'];
+	$message=$_POST['message'];
+	//hacemos la sentencia de sql
+	$sql="INSERT INTO Datos VALUES('$name',
+								   '$email',
+								   '$message')";
+	//ejecutamos la sentencia de sql
+	$ejecutar=$conectar->query($sql);
+	//verificamos la ejecucion
+	if(!$ejecutar){
+		echo"Hubo Algun Error";
+	}else{
+		echo"Datos Guardados Correctamente<br><a href='index.html'>Volver</a>";
+	}
+	$numero_visitantes=$conectar->query(
+	"SELECT COUNT (*) FROM Datos"
+	);
+	fetch_row()[0]
+	
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -20,7 +51,7 @@
 							<section class="panel banner right">
 								<div class="content color0 span-3-75">
 									<h1 class="major">Bienvenido al<br />
-									Futuro</h1>
+									Futuro <?=$numero_visitantes?></h1>
 									<p>Esto es <strong>Monitoring Cantabria (MC)</strong>, una empresa pensada para tu seguridad y futuro. Pensado para empresas que quieran saberlo todo sobre sus sistemas.</p>
 									<ul class="actions">
 										<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
@@ -102,7 +133,7 @@
 								</div>
 								<div class="inner columns divided">
 									<div class="span-3-25">
-										<form method="post" action="guardar.php">
+										<form method="post">
 											<div class="fields">
 												<div class="field half">
 													<label for="name">Nombre</label>
