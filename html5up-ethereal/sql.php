@@ -1,4 +1,26 @@
 <?php
+
+session_start();
+if(isset($_post['password'])){
+	if ($_post['password'])
+		$_SESSION['ok']=1;
+	if (!isset($_SESSION['ok']))
+		echo '<form action="/my-handling-form-page" method="post"> 
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="Password" />
+    </div>
+    <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg"></textarea>
+    </div>
+			</form>';
+	exit();
+}
 	//conectamos Con el servidor
 	$conectar = new mysqli('localhost','id11961169_kevin','12345678','id11961169_formularios');
 	//verificamos la conexion
@@ -24,5 +46,6 @@ foreach ( $r as $c ) {
 $s .= '</table>';
 
 echo $s
+
 	
 ?>
