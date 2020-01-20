@@ -11,9 +11,18 @@
 	//hacemos la sentencia de sql
 	$sql="SELECT * FROM `Datos`";
 	//ejecutamos la sentencia de sql
-	$r=$conectar->query($sql)->fetch_all();
-	echo'<pre>';
-	print_r($r);
-	echo'</pre>';
+	$r=$conectar->query($sql)->fetch_all(MYSQLI_ASSOC);
+
+	$s = '<table border="1">';
+foreach ( $r as $c ) {
+        $s .= '<tr>';
+        foreach ( $c as $v ) {
+                $s .= '<td>'.$v.'</td>';
+        }
+        $s .= '</tr>';
+}
+$s .= '</table>';
+
+echo $s
 	
 ?>
