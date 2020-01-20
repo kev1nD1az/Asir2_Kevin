@@ -1,23 +1,23 @@
 <?php
 
 session_start();
-if(isset($_post['password'])){
-	if ($_post['password'])
+if(isset($_POST['password']))
+	if ($_POST['password']=='12345678')
 		$_SESSION['ok']=1;
-	if (!isset($_SESSION['ok']))
-		echo '<form action="/my-handling-form-page" method="post"> 
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" />
-    </div>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" id="Password" />
-    </div>
-    <div class="button">
-        <button type="login">Inicia sesion</button>
-    </div>
-			</form>';
+if (!isset($_SESSION['ok'])){
+	echo '<form method="post"> 
+<div>
+	<label for="name">Name:</label>
+	<input type="text" name="name" />
+</div>
+<div>
+	<label for="password">Password:</label>
+	<input type="password" name="password" />
+</div>
+<div class="button">
+	<button type="login">Inicia sesion</button>
+</div>
+		</form>';
 	exit();
 }
 	//conectamos Con el servidor
