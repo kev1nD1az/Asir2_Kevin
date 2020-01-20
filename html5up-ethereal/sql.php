@@ -14,9 +14,8 @@ if(isset($_post['password'])){
         <label for="password">Password:</label>
         <input type="password" id="Password" />
     </div>
-    <div>
-        <label for="msg">Message:</label>
-        <textarea id="msg"></textarea>
+    <div class="button">
+        <button type="login">Inicia sesion</button>
     </div>
 			</form>';
 	exit();
