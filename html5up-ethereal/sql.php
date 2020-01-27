@@ -22,6 +22,7 @@ if (!isset($_SESSION['ok'])){
 }
 	//conectamos Con el servidor
 	$conectar = new mysqli('localhost','id11961169_kevin','12345678','id11961169_formularios');
+	//$conectar = new mysqli('localhost','root','','sri');
 	//verificamos la conexion
 	if(!$conectar){
 		echo"No Se Pudo Conectar Con El Servidor";
@@ -33,6 +34,8 @@ if (!isset($_SESSION['ok'])){
 	$sql="SELECT * FROM `Datos`";
 	//ejecutamos la sentencia de sql
 	$r=$conectar->query($sql)->fetch_all(MYSQLI_ASSOC);
+	
+	if (isset($_GET['del'])){ $conectar->query ("DELETE FROM Datos WHERE id =".$_GET['del'].";");}
 
 	$s = '<table border="1">';
 foreach ( $r as $c ) {
@@ -40,8 +43,12 @@ foreach ( $r as $c ) {
         foreach ( $c as $v ) {
                 $s .= '<td>'.$v.'</td>';
         }
+		
+		$s .= '<td> <a href= "?del=' . $c['id'].'"> borrar </a></td>';
+		
         $s .= '</tr>';
 }
+
 $s .= '</table>';
 
 echo $s
